@@ -25,7 +25,7 @@ class InferlessPythonModel:
     def infer(self, inputs):
         prompt = inputs["prompt"]
         sequences = self.generator(
-            "import socket\n\ndef ping_exponential_backoff(host: str):",
+            prompt,
             do_sample=True,
             top_k=10,
             temperature=0.1,
